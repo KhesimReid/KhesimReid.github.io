@@ -6,10 +6,16 @@
 -->
 <html>
 	<head>
-		<title>Cool Stuff</title>
+		<title>Khesim Reid - Projects</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+				.eventliteSlides {display:none;}
+				.chatappSlides {display:none;}
+				.marketshareSlides {display:none;}
+				.onwordSlides {display:none;}
+		</style>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -20,7 +26,7 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>Projects</h1>
-						<p>Here are some of the cool stuff I've built as part of University courses and in my spare time.</p>
+						<p>Here are some of the cool stuff I've built as part of university courses and in my spare time.</p>
 					</header>
 
 				<!-- Main -->
@@ -29,11 +35,6 @@
 						<!-- Content -->
 							<section id="content" class="main">
 								<span class="image main"><img src="images/Me/hackathon.jpg" alt=""  height="500"/></span>
-								<!-- <h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p> -->
 								
 								<div class="container">
 									<div class="row">
@@ -55,8 +56,18 @@
 										</div>
 										<div class="col-5">
 											<!-- EventLite Photo slider here -->
+											<img class="eventliteSlides" src="images/Eventlite/EventLite_HomePage.png" style="height:25%"/>
+  											<img class="eventliteSlides" src="images/Eventlite/EventLite_AllEvents.png" style="height:25%"/>
+											<img class="eventliteSlides" src="images/Eventlite/EventLite_AllEventsMap.png" style="height:25%"/>
+									     	<img class="eventliteSlides" src="images/Eventlite/EventLite_SpecificEventPage.png" style="height:25%"/>
+										    <img class="eventliteSlides" src="images/Eventlite/EventLite_AddEventPage.png" style="height:25%"/>
+											  
+											<!-- Move buttons to center below picture -->
+  											<button class="w3-button w3-black w3-display-left"  onclick="plusDivs(-1)">&#10094;</button>
+										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 										</div>
 									</div>
+									<!-- Get rid of space at bottom of column -->
 									<div class="row">
 										<p><strong>Languages & Technologies Used:</strong> Java, JavaScript, HTML, CSS, Thymeleaf, Spring,
 											Eclipse, Git, Mapbox API, Twitter API</p>
@@ -83,6 +94,14 @@
 										</div>
 										<div class="col-5">
 											<!-- ChatApp! Photo slider here -->
+											<!-- <img class="chatappSlides" src="images/ChatApp!/HomeScreen.png" style="height:25%"/>
+  											<img class="chatappSlides" src="images/ChatApp!/PhotosPage.png" style="height:25%"/>
+											<img class="chatappSlides" src="images/ChatApp!/SoundsPage.png" style="height:25%"/>
+									     	<img class="chatappSlides" src="images/ChatApp!/MicrophonePage.png" style="height:25%"/> -->
+											  
+											<!-- Move buttons to center below picture -->
+  											<!-- <button class="w3-button w3-black w3-display-left"  onclick="plusDivs(-1)">&#10094;</button>
+										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
 											
 										</div>
 									</div>
@@ -94,7 +113,7 @@
 
 								<div class="container">
 									<div class="row">
-										<strong><h2>Marketshare</h2></strong>
+										<a href="https://devpost.com/software/marketshare"><strong><h2>Marketshare</h2></strong></a>
 									</div>
 									<div class="row">
 										<div class="col-7">
@@ -113,6 +132,13 @@
 										</div>
 										<div class="col-5">
 											<!-- Marketshare Photo slider here -->
+											<!-- <img class="marketshareSlides" src="images/Marketshare/UserProfile.jpg" style="height:25%"/>
+  											<img class="marketshareSlides" src="images/Marketshare/UserStocks.jpg" style="height:25%"/>
+											<img class="marketshareSlides" src="images/Marketshare/NewStockForm.png" style="height:25%"/> -->
+
+											 <!-- Center buttons under the image -->
+											<!-- <button class="w3-button w3-black w3-display-left"  onclick="plusDivs(-1)">&#10094;</button>
+										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
 										</div>
 									</div>
 									<div class="row">
@@ -124,7 +150,7 @@
 
 								<div class="container">
 										<div class="row">
-											<strong><h2>OnWord</h2></strong>
+											<a href="https://gitlab.cs.man.ac.uk/Y8/onword"><strong><h2>OnWord</h2></strong></a>
 										</div>
 										<div class="row">
 											<div class="col-7">
@@ -143,6 +169,17 @@
 											</div>
 											<div class="col-5">
 												<!-- OnWord Photo slider here -->
+												<!-- <img class="onwordSlides" src="images/OnWord/HomePage.png" style="height:25%"/>
+  												<img class="onwordSlides" src="images/OnWord/AboutPage.png" style="height:25%"/>
+												<img class="onwordSlides" src="images/OnWord/CrosswordCreation.png" style="height:25%"/>
+												<img class="onwordSlides" src="images/OnWord/CrosswordCompletion.jpg" style="height:25%"/>
+  												<img class="onwordSlides" src="images/OnWord/UserProfile.jpg" style="height:25%"/>
+												<img class="onwordSlides" src="images/OnWord/Leaderboard.png" style="height:25%"/>
+												<img class="onwordSlides" src="images/OnWord/ContactUs.png" style="height:25%"/> -->
+
+												<!-- Center buttons below picture -->
+												<!-- <button class="w3-button w3-black w3-display-left"  onclick="plusDivs(-1)">&#10094;</button>
+										  		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
 												
 											</div>
 										</div>
@@ -203,7 +240,28 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src= "assets/js/main.js"></script>
+
+			<!-- Edit script to be used for all slide shows -->
+			<script>
+				var slideIndex = 1;
+				showDivs(slideIndex);
+				
+				function plusDivs(n) {
+		     		showDivs(slideIndex += n);
+				}
+					
+				function showDivs(n) {
+				  var i;
+				  var x = document.getElementsByClassName("eventliteSlides");
+				  if (n > x.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = x.length}
+				  for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				  }
+				  x[slideIndex-1].style.display = "block";  
+				}
+			</script>
 
 	</body>
 </html>
