@@ -10,12 +10,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
+		<!-- <style>
 				.eventliteSlides {display:none;}
 				.chatappSlides {display:none;}
 				.marketshareSlides {display:none;}
 				.onwordSlides {display:none;}
-		</style>
+		</style> -->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -54,17 +54,17 @@
 												given. 
 											</p>
 										</div>
-										<div class="col-5">
+										<div class="col-5 slider" id="eventliteSlides">
 											<!-- EventLite Photo slider here -->
-											<img class="eventliteSlides" src="images/Eventlite/EventLite_HomePage.png" style="height:25%"/>
-  											<img class="eventliteSlides" src="images/Eventlite/EventLite_AllEvents.png" style="height:25%"/>
-											<img class="eventliteSlides" src="images/Eventlite/EventLite_AllEventsMap.png" style="height:25%"/>
-									     	<img class="eventliteSlides" src="images/Eventlite/EventLite_SpecificEventPage.png" style="height:25%"/>
-										    <img class="eventliteSlides" src="images/Eventlite/EventLite_AddEventPage.png" style="height:25%"/>
+											<img class="mySlides eventlite-img-crop" src="images/Eventlite/EventLite_HomePage.png" style="display:block"/>
+  											<img class="mySlides eventlite-img-crop" src="images/Eventlite/EventLite_AllEvents.png" style="display:block"/>
+											<img class="mySlides eventlite-img-crop" src="images/Eventlite/EventLite_AllEventsMap.png" style="display:block"/>
+									     	<img class="mySlides eventlite-img-crop" src="images/Eventlite/EventLite_SpecificEventPage.png" style="display:block"/>
+										    <img class="mySlides eventlite-img-crop" src="images/Eventlite/EventLite_AddEventPage.png" style="display:block"/>
 											  
 											<!-- Move buttons to center below picture -->
-  											<button class="w3-button w3-black w3-display-left"  onclick="plusDivs(-1)">&#10094;</button>
-										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  											<button class="w3-button w3-black w3-display-left"  onclick="plusDivs(this, -1)">&#10094;</button>
+										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(this, 1)">&#10095;</button>
 										</div>
 									</div>
 									<!-- Get rid of space at bottom of column -->
@@ -92,16 +92,16 @@
 												This was also my first time working in Android development.
 											</p>
 										</div>
-										<div class="col-5">
+										<div class="col-5 slider" id="chatappSlides">
 											<!-- ChatApp! Photo slider here -->
-											<!-- <img class="chatappSlides" src="images/ChatApp!/HomeScreen.png" style="height:25%"/>
-  											<img class="chatappSlides" src="images/ChatApp!/PhotosPage.png" style="height:25%"/>
-											<img class="chatappSlides" src="images/ChatApp!/SoundsPage.png" style="height:25%"/>
-									     	<img class="chatappSlides" src="images/ChatApp!/MicrophonePage.png" style="height:25%"/> -->
+											<img class="mySlides chatapp-img-crop" src="images/ChatApp!/HomeScreen.png" style="display:block"/>
+  											<img class="mySlides chatapp-img-crop" src="images/ChatApp!/PhotosPage.png" style="display:block"/>
+											<img class="mySlides chatapp-img-crop" src="images/ChatApp!/SoundsPage.png" style="display:block"/>
+									     	<img class="mySlides chatapp-img-crop" src="images/ChatApp!/MicrophonePage.png" style="display:block"/>
 											  
 											<!-- Move buttons to center below picture -->
-  											<!-- <button class="w3-button w3-black w3-display-left"  onclick="plusDivs(-1)">&#10094;</button>
-										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
+  											<button class="w3-button w3-black w3-display-left"  onclick="plusDivs(this, -1)">&#10094;</button>
+										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(this, 1)">&#10095;</button>
 											
 										</div>
 									</div>
@@ -113,7 +113,7 @@
 
 								<div class="container">
 									<div class="row">
-										<a href="https://devpost.com/software/marketshare"><strong><h2>Marketshare</h2></strong></a>
+										<strong><h2>Marketshare</h2></strong>
 									</div>
 									<div class="row">
 										<div class="col-7">
@@ -127,18 +127,19 @@
 												the other working on the frontend design. I worked in the backend sub team and was
 												responsible for writing code which got the stock data and ran calculations on it, while my
 												teammate connected the database and set up the page controllers. This was my first
-												experience working with JavaScript.
+												experience working with JavaScript. <br>
+												<a style="color:blue" href="https://github.com/seanjparker/durhack18-stockmarket" target="_blank">View Code</a>
 											</p>
 										</div>
-										<div class="col-5">
+										<div class="col-5 slider" id="marketshareSlides">
 											<!-- Marketshare Photo slider here -->
-											<!-- <img class="marketshareSlides" src="images/Marketshare/UserProfile.jpg" style="height:25%"/>
-  											<img class="marketshareSlides" src="images/Marketshare/UserStocks.jpg" style="height:25%"/>
-											<img class="marketshareSlides" src="images/Marketshare/NewStockForm.png" style="height:25%"/> -->
+											<img class="mySlides marketshare-img-crop" src="images/Marketshare/UserProfile.jpg" style="display:block"/>
+  											<img class="mySlides marketshare-img-crop" src="images/Marketshare/UserStocks.jpg" style="display:block"/>
+											<img class="mySlides marketshare-big-img-crop" src="images/Marketshare/NewStockForm.png" style="display:block"/>
 
 											 <!-- Center buttons under the image -->
-											<!-- <button class="w3-button w3-black w3-display-left"  onclick="plusDivs(-1)">&#10094;</button>
-										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
+											<button class="w3-button w3-black w3-display-left"  onclick="plusDivs(this, -1)">&#10094;</button>
+										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(this, 1)">&#10095;</button>
 										</div>
 									</div>
 									<div class="row">
@@ -150,10 +151,11 @@
 
 								<div class="container">
 										<div class="row">
-											<a href="https://gitlab.cs.man.ac.uk/Y8/onword"><strong><h2>OnWord</h2></strong></a>
+											<strong><h2>OnWord</h2></strong> 
+	
 										</div>
 										<div class="row">
-											<div class="col-7">
+											<div class="col-6">
 												<p>
 													OnWord is a website built to allow users to create crossword puzzles and solve them in a
 													competitive and collaborative environment. The target market for this website was senior
@@ -164,22 +166,24 @@
 													consideration of making the website accessible to persons afflicted with colour blindness.
 													The About Page, User Profile Page and Contact Us Page were created primarily by me and I
 													assisted in all other parts of the website, except for the creating of the crossword grid and
-													storing of crossword puzzles.
+													storing of crossword puzzles. <br>
+													<a style="color: blue" href="https://gitlab.cs.man.ac.uk/Y8/onword" target="_blank">View Code</a>
 												</p>
+												
 											</div>
-											<div class="col-5">
+											<div class="col-6 slider" id="onwordSlides">
 												<!-- OnWord Photo slider here -->
-												<!-- <img class="onwordSlides" src="images/OnWord/HomePage.png" style="height:25%"/>
-  												<img class="onwordSlides" src="images/OnWord/AboutPage.png" style="height:25%"/>
-												<img class="onwordSlides" src="images/OnWord/CrosswordCreation.png" style="height:25%"/>
-												<img class="onwordSlides" src="images/OnWord/CrosswordCompletion.jpg" style="height:25%"/>
-  												<img class="onwordSlides" src="images/OnWord/UserProfile.jpg" style="height:25%"/>
-												<img class="onwordSlides" src="images/OnWord/Leaderboard.png" style="height:25%"/>
-												<img class="onwordSlides" src="images/OnWord/ContactUs.png" style="height:25%"/> -->
+												<img class="mySlides onword-img-crop" src="images/OnWord/HomePage.png" style="display:block"/>
+  												<img class="mySlides onword-img-crop" src="images/OnWord/AboutPage.png" style="display:block"/>
+												<img class="mySlides onword-img-crop" src="images/OnWord/CrosswordCreation.png" style="display:block"/>
+												<img class="mySlides onword-img-crop" src="images/OnWord/CrosswordCompletion.png" style="display:block"/>
+  												<img class="mySlides onword-img-crop" src="images/OnWord/UserProfile.png" style="display:block"/>
+												<img class="mySlides onword-img-crop" src="images/OnWord/Leaderboard.png" style="display:block"/>
+												<img class="mySlides onword-img-crop" src="images/OnWord/ContactUs.png" style="display:block"/>
 
 												<!-- Center buttons below picture -->
-												<!-- <button class="w3-button w3-black w3-display-left"  onclick="plusDivs(-1)">&#10094;</button>
-										  		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
+												<button class="w3-button w3-black w3-display-left"  onclick="plusDivs(this, -1)">&#10094;</button>
+										  		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(this, 1)">&#10095;</button>
 												
 											</div>
 										</div>
@@ -227,7 +231,7 @@
           </ul>
         </section>
         <p class="copyright">
-          &copy; Khesim Reid </br> Design: <a href="https://html5up.net">HTML5 UP</a>.
+          &copy; Khesim Reid <br> Design: <a href="https://html5up.net">HTML5 UP</a>.
         </p>
       </footer>
 
@@ -242,26 +246,57 @@
 			<script src="assets/js/util.js"></script>
 			<script src= "assets/js/main.js"></script>
 
-			<!-- Edit script to be used for all slide shows -->
-			<script>
-				var slideIndex = 1;
-				showDivs(slideIndex);
-				
-				function plusDivs(n) {
-		     		showDivs(slideIndex += n);
-				}
-					
-				function showDivs(n) {
-				  var i;
-				  var x = document.getElementsByClassName("eventliteSlides");
-				  if (n > x.length) {slideIndex = 1}
-				  if (n < 1) {slideIndex = x.length}
-				  for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none";  
-				  }
-				  x[slideIndex-1].style.display = "block";  
-				}
-			</script>
+		
+<!-- Slide show script -->
+<script>
+	var sliderObjects = [];
+	createSliderObjects();
+
+	function plusDivs(obj, n) {
+  		var parentDiv = $(obj).parent();
+  		var matchedDiv;
+  		$.each(sliderObjects, function(i, item) {
+    		if ($(parentDiv[0]).attr('id') == $(item).attr('id')) {
+      			matchedDiv = item;
+      			return false;
+    		}
+		  });
+		  
+  		matchedDiv.slideIndex=matchedDiv.slideIndex+n;
+  		showDivs(matchedDiv, matchedDiv.slideIndex);
+	}
+
+	function createSliderObjects() {
+  		var sliderDivs = $('.slider');
+  		$.each(sliderDivs, function(i, item) {
+    		var obj = {};
+    		obj.id = $(item).attr('id');
+    		obj.divContent = item;
+    		obj.slideIndex = 1;
+    		obj.slideContents = $(item).find('.mySlides');
+    		showDivs(obj, 1);
+    		sliderObjects.push(obj);
+  		});
+	}
+
+	function showDivs(divObject, n) {
+  		debugger;
+  		var i;
+  		if (n > divObject.slideContents.length) {
+    		divObject.slideIndex = 1
+		  }
+		  
+  		if (n < 1) {
+    		divObject.slideIndex = divObject.slideContents.length
+		  }
+		  
+  		for (i = 0; i < divObject.slideContents.length; i++) {
+    		divObject.slideContents[i].style.display = "none";
+		  }
+		  
+  		divObject.slideContents[divObject.slideIndex - 1].style.display = "block";
+	}
+</script>
 
 	</body>
 </html>

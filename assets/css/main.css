@@ -72,6 +72,33 @@ input, select, textarea {
 	appearance: none;
 }
 
+
+.eventlite-img-crop {
+    object-fit: cover;
+    height: 275px;
+}
+
+.chatapp-img-crop {
+	object-fit: cover;
+	height: 500px;
+}
+
+.marketshare-img-crop {
+	object-fit: cover;
+	height: 300px;
+}
+
+.marketshare-big-img-crop {
+	object-fit: cover;
+	height: 300px;
+	width: 450px;
+}
+
+.onword-img-crop {
+	object-fit: cover;
+	height: 300px;
+	/* width: 400px; */
+}
 /* Basic */
 
 	@-ms-viewport {
