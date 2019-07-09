@@ -10,12 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- <style>
-				.eventliteSlides {display:none;}
-				.chatappSlides {display:none;}
-				.marketshareSlides {display:none;}
-				.onwordSlides {display:none;}
-		</style> -->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -67,7 +61,7 @@
 										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(this, 1)">&#10095;</button>
 										</div>
 									</div>
-									<!-- Get rid of space at bottom of column -->
+								
 									<div class="row">
 										<p><strong>Languages & Technologies Used:</strong> Java, JavaScript, HTML, CSS, Thymeleaf, Spring,
 											Eclipse, Git, Mapbox API, Twitter API</p>
@@ -99,7 +93,6 @@
 											<img class="mySlides chatapp-img-crop" src="images/ChatApp!/SoundsPage.png" style="display:block"/>
 									     	<img class="mySlides chatapp-img-crop" src="images/ChatApp!/MicrophonePage.png" style="display:block"/>
 											  
-											<!-- Move buttons to center below picture -->
   											<button class="w3-button w3-black w3-display-left"  onclick="plusDivs(this, -1)">&#10094;</button>
 										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(this, 1)">&#10095;</button>
 											
@@ -137,7 +130,6 @@
   											<img class="mySlides marketshare-img-crop" src="images/Marketshare/UserStocks.jpg" style="display:block"/>
 											<img class="mySlides marketshare-big-img-crop" src="images/Marketshare/NewStockForm.png" style="display:block"/>
 
-											 <!-- Center buttons under the image -->
 											<button class="w3-button w3-black w3-display-left"  onclick="plusDivs(this, -1)">&#10094;</button>
 										  	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(this, 1)">&#10095;</button>
 										</div>
@@ -181,7 +173,6 @@
 												<img class="mySlides onword-img-crop" src="images/OnWord/Leaderboard.png" style="display:block"/>
 												<img class="mySlides onword-img-crop" src="images/OnWord/ContactUs.png" style="display:block"/>
 
-												<!-- Center buttons below picture -->
 												<button class="w3-button w3-black w3-display-left"  onclick="plusDivs(this, -1)">&#10094;</button>
 										  		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(this, 1)">&#10095;</button>
 												
@@ -249,58 +240,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src= "assets/js/main.js"></script>
-
-		
-<!-- Slide show script -->
-<script>
-	var sliderObjects = [];
-	createSliderObjects();
-
-	function plusDivs(obj, n) {
-  		var parentDiv = $(obj).parent();
-  		var matchedDiv;
-  		$.each(sliderObjects, function(i, item) {
-    		if ($(parentDiv[0]).attr('id') == $(item).attr('id')) {
-      			matchedDiv = item;
-      			return false;
-    		}
-		  });
-		  
-  		matchedDiv.slideIndex=matchedDiv.slideIndex+n;
-  		showDivs(matchedDiv, matchedDiv.slideIndex);
-	}
-
-	function createSliderObjects() {
-  		var sliderDivs = $('.slider');
-  		$.each(sliderDivs, function(i, item) {
-    		var obj = {};
-    		obj.id = $(item).attr('id');
-    		obj.divContent = item;
-    		obj.slideIndex = 1;
-    		obj.slideContents = $(item).find('.mySlides');
-    		showDivs(obj, 1);
-    		sliderObjects.push(obj);
-  		});
-	}
-
-	function showDivs(divObject, n) {
-  		debugger;
-  		var i;
-  		if (n > divObject.slideContents.length) {
-    		divObject.slideIndex = 1
-		  }
-		  
-  		if (n < 1) {
-    		divObject.slideIndex = divObject.slideContents.length
-		  }
-		  
-  		for (i = 0; i < divObject.slideContents.length; i++) {
-    		divObject.slideContents[i].style.display = "none";
-		  }
-		  
-  		divObject.slideContents[divObject.slideIndex - 1].style.display = "block";
-	}
-</script>
+			<script src="assets/js/photoSlider.js"></script>
 
 	</body>
 </html>
