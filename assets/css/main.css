@@ -99,6 +99,39 @@ input, select, textarea {
 	height: 300px;
 	/* width: 400px; */
 }
+
+
+
+/* Achievement container */
+.achievement {
+	position: relative;
+	display: inline-block;
+	/* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .achievement .achievementDetails {
+	visibility: hidden;
+	width: 250px;
+	background-color: #76c0e3;
+	color: #fff;
+	text-align: left;
+	padding: 5px 0;
+	border-radius: 6px;
+   
+	/* Position the achievement text - see examples below! */
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+  	left: 105%;
+  }
+  
+  /* Show the achievement text when you mouse over the achievement container */
+  .achievement:hover .achievementDetails {
+	visibility: visible;
+  }
+
+
 /* Basic */
 
 	@-ms-viewport {
