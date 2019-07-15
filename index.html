@@ -478,7 +478,7 @@
                 <h1>Feedback Appreciated!</h1>
                 <!-- <small>I'll get back to you as quickly as possible</small> -->
 
-                <form action="#" method="POST">
+                <form id="messageForm" method="POST">
                   <input placeholder="Name" type="text" name="name" required />
                   <input
                     placeholder="Email"
@@ -493,7 +493,7 @@
                     name="_subject"
                     required
                   />
-                  <textarea placeholder="Message"></textarea>
+                  <textarea placeholder="Message" name="message"></textarea>
                   <input class="formBtn" type="submit" value="Send" />
                 </form>
               </div>
@@ -578,35 +578,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <!-- MOVE SCRIPTS TO ASSETS FOLDER WHEN THEY'RE TESTED AND DONE -->
-    <!-- Script for popup contact form -->
-    <script>
-      $(function() {
-        // contact form animations
-        $("#sendMessage").click(function() {
-          $("#contactForm").fadeToggle();
-        });
-        $(document).mouseup(function(e) {
-          var container = $("#contactForm");
-
-          if (
-            !container.is(e.target) && // if the target of the click isn't the container...
-            container.has(e.target).length === 0
-          ) {
-            // ... nor a descendant of the container
-            container.fadeOut();
-          }
-        });
-      });
-    </script>
-
-    <script>
-      var contactform = document.getElementById("contactform");
-      contactform.setAttribute(
-        "action",
-        "//formspree.io/" + "your" + "@" + "email" + "." + "com"
-      );
-    </script>
+    <script src="assets/js/contact.js"></script>
   </body>
 </html>
