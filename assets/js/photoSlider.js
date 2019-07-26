@@ -4,18 +4,36 @@ var sliderObjects = [];
 createSliderObjects();
 
 function plusDivs(obj, n) {
-  var parentDiv = $(obj).parent();
+  var photosDiv = $(obj) //so that the button can be matched to the parent of the images
+    .parents()
+    .eq(2)
+    .children()[0];
+
   var matchedDiv;
+
   $.each(sliderObjects, function(i, item) {
-    if ($(parentDiv[0]).attr("id") == $(item).attr("id")) {
+    if ($(photosDiv).attr("id") == $(item).attr("id")) {
       matchedDiv = item;
       return false;
     }
   });
-
   matchedDiv.slideIndex = matchedDiv.slideIndex + n;
   showDivs(matchedDiv, matchedDiv.slideIndex);
 }
+
+// function plusDivs(obj, n) {
+//   var parentDiv = $(obj).parent();
+//   var matchedDiv;
+//   $.each(sliderObjects, function(i, item) {
+//     if ($(parentDiv[0]).attr("id") == $(item).attr("id")) {
+//       matchedDiv = item;
+//       return false;
+//     }
+//   });
+
+//   matchedDiv.slideIndex = matchedDiv.slideIndex + n;
+//   showDivs(matchedDiv, matchedDiv.slideIndex);
+// }
 
 function createSliderObjects() {
   var sliderDivs = $(".slider");
