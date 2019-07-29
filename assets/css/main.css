@@ -2933,7 +2933,7 @@ textarea { height: 80px; resize: none; }
 			-ms-flex: 1;
 			flex: 1;
 			padding: 1.5em;
-			color: #ffffff;
+			color: inherit;
 			text-align: center;
 		}
 
