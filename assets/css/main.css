@@ -1,12 +1,6 @@
 @import url(font-awesome.min.css);
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
 
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -71,6 +65,87 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
+.img-crop
+{
+	object-fit: scale-down;
+	height: 100%;
+	width: 100%;
+}
+
+
+/* Achievement container */
+.achievement {
+	position: relative;
+	display: inline-block;
+	/* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .achievement .achievementDetails {
+	visibility: hidden;
+	width: 250px;
+	background-color: #76c0e3;
+	color: #fff;
+	text-align: left;
+	padding: 5px 0;
+	border-radius: 6px;
+   
+	/* Position the achievement text */
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+  	left: 105%;
+  }
+  
+  /* Show the achievement text when you mouse over the achievement container */
+  .achievement:hover .achievementDetails {
+	visibility: visible;
+  }
+
+
+  /* Contact Form */
+
+#contactForm { 
+  display: none;
+  border: 6px solid #76c0e3; 
+  padding: 2em;
+  width: 400px;
+  height: 600px;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+input, textarea { 
+  margin: .8em auto;
+  font-family: inherit; 
+  text-transform: inherit; 
+  font-size: inherit;
+  
+  display: block; 
+  width: 280px; 
+  padding: .4em;
+}
+textarea { height: 80px; resize: none; }
+
+.formBtn { 
+  width: 140px;
+  display: inline-block;
+  
+  background: teal;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.2em;
+  border: none;
+  height: 30px;
+}
+  /* Contact Form */
 
 /* Basic */
 
@@ -2858,7 +2933,7 @@ input, select, textarea {
 			-ms-flex: 1;
 			flex: 1;
 			padding: 1.5em;
-			color: #ffffff;
+			color: inherit;
 			text-align: center;
 		}
 
