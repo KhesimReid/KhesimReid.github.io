@@ -147,6 +147,10 @@ textarea { height: 80px; resize: none; }
 }
   /* Contact Form */
 
+
+  @media (hover){
+	  .hint {text-align: center}
+  }
 /* Basic */
 
 	@-ms-viewport {
