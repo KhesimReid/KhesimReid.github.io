@@ -147,7 +147,7 @@ textarea { height: 80px; resize: none; }
   /* Contact Form */
 
 
-  @media (hover){
+  @media (hover: hover){
 	  .hint {text-align: center}
   }
 
