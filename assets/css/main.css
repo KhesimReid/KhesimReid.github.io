@@ -150,6 +150,10 @@ textarea { height: 80px; resize: none; }
   @media (hover){
 	  .hint {text-align: center}
   }
+
+  @media (hover: none){
+	.hint {display: none}
+  }
 /* Basic */
 
 	@-ms-viewport {
