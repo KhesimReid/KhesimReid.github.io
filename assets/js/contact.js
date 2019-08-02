@@ -17,14 +17,25 @@ $(function() {
 });
 
 $(function() {
+  x = 2;
+  y = 2 * 3;
+  z = 2 + 2;
   var messageForm = document.getElementById("messageForm");
   messageForm.setAttribute(
     "action",
     "https:" +
       "//formspree.io/" +
-      "khesim" +
+      "k" +
+      "." +
+      "a" +
       "." +
       "reid" +
+      "" +
+      x +
+      "" +
+      y +
+      "" +
+      z +
       "@" +
       "gmail" +
       "." +
