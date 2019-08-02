@@ -109,8 +109,8 @@ input, select, textarea {
   display: none;
   border: 6px solid #76c0e3; 
   padding: 2em;
-  width: 400px;
-  height: 600px;
+  width: 20em;
+  height: 32em;
   text-align: center;
   background: #fff;
   position: fixed;
