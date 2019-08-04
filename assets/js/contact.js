@@ -17,6 +17,12 @@ $(function() {
 });
 
 $(function() {
+  $("#closeBtn").click(function() {
+    $("#contactForm").fadeOut();
+  });
+});
+
+$(function() {
   x = 2;
   y = 2 * 3;
   z = 2 + 2;

@@ -34,7 +34,7 @@
       <!-- Header -->
       <header id="header" class="alt">
         <span class="logo"><img src="images/Me/profile.jpg" alt=""/></span>
-        <h1>Hi, I'm Khesim!</h1>
+        <h1>Hi, I'm Khesim</h1>
         <ul class="icons">
           <li>
             <a
@@ -242,7 +242,9 @@
           </ul>
           <footer class="major">
             <ul class="actions special">
-              <li><a href="projects.html" class="button">See More</a></li>
+              <li>
+                <a href="projects.html" class="button primary">See More</a>
+              </li>
             </ul>
           </footer>
         </section>
@@ -492,7 +494,11 @@
               </li>
               <!-- Contact form code -->
               <div id="contactForm">
-                <h1>Feedback Appreciated!</h1>
+                <div class="row">
+                  <i class="icon fa-times" id="closeBtn" style="color:red"></i>
+                </div>
+                <!-- <i class="icon fa-times" id="closeBtn" style="color:red"></i> -->
+                <h2>Feedback is Appreciated!</h2>
                 <form id="messageForm" method="POST">
                   <input placeholder="Name" type="text" name="name" required />
                   <input
@@ -509,7 +515,12 @@
                     required
                   />
                   <textarea placeholder="Message" name="message"></textarea>
-                  <input class="formBtn" type="submit" value="Send" />
+                  <input
+                    class="formBtn"
+                    type="submit"
+                    value="Send"
+                    style="color: white !important; background-color: #8cc9f0"
+                  />
                 </form>
               </div>
               <!-- Contact form code -->
@@ -560,8 +571,8 @@
           </ul>
         </section>
 
-        <section style="text-align:center">
-          <span class="image"
+        <section>
+          <span class="image" style="align-content: center"
             ><img src="images/Me/headshot.jpg" alt="" height="50%" width="50%"
           /></span>
         </section>

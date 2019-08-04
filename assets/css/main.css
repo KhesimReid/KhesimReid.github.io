@@ -110,7 +110,7 @@ input, select, textarea {
   border: 6px solid #76c0e3; 
   padding: 2em;
   width: 20em;
-  height: 32em;
+  height: 30em;
   text-align: center;
   background: #fff;
   position: fixed;
@@ -131,14 +131,14 @@ input, textarea {
   width: 280px; 
   padding: .4em;
 }
-textarea { height: 80px; resize: none; }
+textarea { height: 100px; resize: none; }
 
 .formBtn { 
   width: 140px;
   display: inline-block;
   
-  background: teal;
-  color: #fff;
+  color: white !important;
+  background-color: #8cc9f0;
   font-weight: 100;
   font-size: 1.2em;
   border: none;
