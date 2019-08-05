@@ -78,13 +78,12 @@ input, select, textarea {
 .achievement {
 	position: relative;
 	display: inline-block;
-	/* border-bottom: 1px dotted black; If you want dots under the hoverable text */
   }
   
   /* Tooltip text */
   .achievement .achievementDetails {
 	visibility: hidden;
-	width: 250px;
+	width: 14em;
 	background-color: #76c0e3;
 	color: #fff;
 	text-align: left;
@@ -110,8 +109,8 @@ input, select, textarea {
   display: none;
   border: 6px solid #76c0e3; 
   padding: 2em;
-  width: 400px;
-  height: 600px;
+  width: 20em;
+  height: 30em;
   text-align: center;
   background: #fff;
   position: fixed;
@@ -132,14 +131,14 @@ input, textarea {
   width: 280px; 
   padding: .4em;
 }
-textarea { height: 80px; resize: none; }
+textarea { height: 100px; resize: none; }
 
 .formBtn { 
   width: 140px;
   display: inline-block;
   
-  background: teal;
-  color: #fff;
+  color: white !important;
+  background-color: #8cc9f0;
   font-weight: 100;
   font-size: 1.2em;
   border: none;
@@ -147,6 +146,14 @@ textarea { height: 80px; resize: none; }
 }
   /* Contact Form */
 
+
+  @media (hover: hover){
+	  .hint {text-align: center}
+  }
+
+  @media (hover: none){
+	.hint {display: none}
+  }
 /* Basic */
 
 	@-ms-viewport {
@@ -3725,7 +3732,7 @@ textarea { height: 80px; resize: none; }
 
 					#main > .main > .image.main:first-child {
 						margin: -2.5em 0 1.5em -1em;
-						width: calc(100% + 2em);
+						/* width: calc(100% + 2em); */
 						border-radius: 0;
 					}
 
