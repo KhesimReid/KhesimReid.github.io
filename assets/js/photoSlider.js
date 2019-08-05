@@ -21,20 +21,6 @@ function plusDivs(obj, n) {
   showDivs(matchedDiv, matchedDiv.slideIndex);
 }
 
-// function plusDivs(obj, n) {
-//   var parentDiv = $(obj).parent();
-//   var matchedDiv;
-//   $.each(sliderObjects, function(i, item) {
-//     if ($(parentDiv[0]).attr("id") == $(item).attr("id")) {
-//       matchedDiv = item;
-//       return false;
-//     }
-//   });
-
-//   matchedDiv.slideIndex = matchedDiv.slideIndex + n;
-//   showDivs(matchedDiv, matchedDiv.slideIndex);
-// }
-
 function createSliderObjects() {
   var sliderDivs = $(".slider");
   $.each(sliderDivs, function(i, item) {
