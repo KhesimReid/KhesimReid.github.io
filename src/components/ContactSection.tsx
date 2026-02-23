@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Github, Linkedin, FileDown, Send } from 'lucide-react';
+import { MagneticButton } from './MagneticButton';
 
 const FORMSPARK_URL = 'https://submit-form.com/ArdzDo2kI';
 
@@ -137,15 +138,13 @@ export function ContactSection() {
                   <p className="text-red-500 text-sm">Something went wrong. Please try again.</p>
                 )}
 
-                <motion.button
+                <MagneticButton
                   type="submit"
                   disabled={status === 'loading'}
-                  whileHover={{ scale: 1.01 }}
-                  whileTap={{ scale: 0.99 }}
                   className="w-full bg-sky-500 hover:bg-sky-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium py-4 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300">
                   <Send className="w-4 h-4" />
                   {status === 'loading' ? 'Sending…' : 'Send Message'}
-                </motion.button>
+                </MagneticButton>
               </form>
 
             <div className="mt-12 pt-8 border-t border-slate-100 flex justify-center gap-8">

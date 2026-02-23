@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
+import { MagneticButton } from './MagneticButton';
 
 export function ThankYouPage() {
   const navigate = useNavigate();
@@ -26,13 +27,11 @@ export function ThankYouPage() {
           Thanks for reaching out — I'll get back to you as soon as possible.
         </p>
 
-        <motion.button
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.99 }}
+        <MagneticButton
           onClick={() => navigate('/')}
           className="bg-sky-500 hover:bg-sky-600 text-white font-medium px-8 py-3 rounded-lg transition-colors duration-300">
           Back to site
-        </motion.button>
+        </MagneticButton>
       </motion.div>
     </div>
   );
