@@ -33,10 +33,9 @@ export function TopNavigation({ activeSection, sections }: TopNavigationProps) {
     >
       <div className="container mx-auto px-6 md:px-8 flex items-center justify-between">
         <div
-          className="text-xl font-serif font-bold text-slate-900 cursor-pointer"
+          className="cursor-pointer"
           onClick={() => scrollToSection('about')}>
-
-          KR.
+          <img src="/logo.png" alt="KR logo" className="h-10 w-auto" />
         </div>
 
         <div className="hidden md:flex items-center gap-8">
