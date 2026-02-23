@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 interface TopNavigationProps {
   activeSection: string;
   sections: {
@@ -8,6 +8,11 @@ interface TopNavigationProps {
   }[];
 }
 export function TopNavigation({ activeSection, sections }: TopNavigationProps) {
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, 'change', (y) => {
+    setScrolled(y > 50);
+  });
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -21,7 +26,11 @@ export function TopNavigation({ activeSection, sections }: TopNavigationProps) {
     }
   };
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100 h-16 md:h-20 flex items-center transition-all duration-300">
+    <motion.nav
+      animate={{ height: scrolled ? 56 : 80 }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm flex items-center transition-shadow duration-300 ${scrolled ? 'shadow-md border-b border-slate-100' : 'border-b border-slate-100'}`}
+    >
       <div className="container mx-auto px-6 md:px-8 flex items-center justify-between">
         <div
           className="text-xl font-serif font-bold text-slate-900 cursor-pointer"
@@ -59,6 +68,6 @@ export function TopNavigation({ activeSection, sections }: TopNavigationProps) {
           {/* Simple hamburger could go here, but focusing on desktop editorial feel first */}
         </div>
       </div>
-    </nav>);
+    </motion.nav>);
 
 }
