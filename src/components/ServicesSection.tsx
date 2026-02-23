@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Code2, Server, Lightbulb, User } from 'lucide-react';
-import { desc } from 'framer-motion/client';
 const services = [
 {
   title: 'Full-Stack Development',
@@ -40,39 +39,6 @@ const services = [
   icon: User
 }];
 
-function TiltCard({ children, className }: { children: React.ReactNode; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const rawX = useMotionValue(0);
-  const rawY = useMotionValue(0);
-  const rotateX = useSpring(useTransform(rawY, [-0.5, 0.5], [8, -8]), { stiffness: 200, damping: 20 });
-  const rotateY = useSpring(useTransform(rawX, [-0.5, 0.5], [-8, 8]), { stiffness: 200, damping: 20 });
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = ref.current?.getBoundingClientRect();
-    if (!rect) return;
-    rawX.set((e.clientX - rect.left) / rect.width - 0.5);
-    rawY.set((e.clientY - rect.top) / rect.height - 0.5);
-  };
-
-  const handleMouseLeave = () => {
-    rawX.set(0);
-    rawY.set(0);
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{ rotateX, rotateY, transformPerspective: 800 }}
-      whileHover={{ y: -6, boxShadow: '0 20px 40px -12px rgba(14,165,233,0.15)' }}
-      transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 export function ServicesSection() {
   return (
@@ -123,7 +89,7 @@ export function ServicesSection() {
             }}
             className={`${index === 4 ? 'md:col-span-2 md:max-w-2xl md:mx-auto w-full' : ''}`}>
 
-            <TiltCard className="p-8 rounded-lg border border-slate-200 bg-white h-full">
+            <div className="p-8 rounded-lg border border-slate-200 bg-white h-full">
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="flex-shrink-0 p-3 rounded-full bg-sky-50 text-sky-600">
                   <service.icon className="w-6 h-6" />
@@ -137,7 +103,7 @@ export function ServicesSection() {
                   </p>
                 </div>
               </div>
-            </TiltCard>
+            </div>
             </motion.div>
           )}
         </div>

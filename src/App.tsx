@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Lenis from 'lenis';
-import { CursorFollower } from './components/CursorFollower';
 import { HeroSection } from './components/HeroSection';
 import { ServicesSection } from './components/ServicesSection';
 import { TechSection } from './components/TechSection';
@@ -96,7 +95,6 @@ function MainPage() {
 export function App() {
   return (
     <HashRouter>
-      <CursorFollower />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
