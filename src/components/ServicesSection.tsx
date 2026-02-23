@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Server, Smartphone, Database, Lightbulb } from 'lucide-react';
+import { Code2, Server, Lightbulb, User } from 'lucide-react';
+import { desc } from 'framer-motion/client';
 const services = [
 {
   title: 'Full-Stack Development',
@@ -9,28 +10,34 @@ const services = [
   icon: Code2
 },
 {
-  title: 'System Architecture',
+  title: 'System Design',
   description:
-  'Designing scalable, robust cloud infrastructures that handle high traffic and ensure 99.9% uptime using AWS and microservices patterns.',
+  'Designing distributed systems that are resilient, performant, and built for scale. I am experienced in architecting platforms for global traffic, managing complex API migrations, and microservices orchestration.',
   icon: Server
 },
-{
-  title: 'Mobile Development',
-  description:
-  "Creating native-feeling mobile experiences using React Native. Cross-platform solutions that don't compromise on performance.",
-  icon: Smartphone
-},
-{
-  title: 'Database Design',
-  description:
-  'Optimizing data schemas and queries for maximum efficiency. Experience with PostgreSQL, MongoDB, and Redis caching strategies.',
-  icon: Database
-},
+// {
+//   title: 'Mobile Development',
+//   description:
+//   "Creating native-feeling mobile experiences using React Native. Cross-platform solutions that don't compromise on performance.",
+//   icon: Smartphone
+// },
+// {
+//   title: 'Database Design',
+//   description:
+//   'Optimizing data schemas and queries for maximum efficiency. Experience with PostgreSQL, MongoDB, and Redis caching strategies.',
+//   icon: Database
+// },
 {
   title: 'Technical Consulting',
   description:
-  'Helping startups and enterprises make the right technology choices. Code reviews, performance audits, and team mentorship.',
+  'I provide technical audits and modernization strategies for startups and established firms. Whether it\'s optimizing frontend performance or hardening backend services, I focus on scalability, efficiency and reliability.',
   icon: Lightbulb
+},
+{
+  title: 'Career Guidance',
+  description:
+  'I am passionate about helping engineers navigate the transition from academia to high-performance engineering cultures. I offer guidance on technical growth, interviewing, and building a sustainable career in tech.',
+  icon: User
 }];
 
 export function ServicesSection() {

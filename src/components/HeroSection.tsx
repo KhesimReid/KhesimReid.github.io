@@ -1,8 +1,7 @@
 import React, { Children } from 'react';
 import { motion } from 'framer-motion';
-import { User } from 'lucide-react';
 export function HeroSection() {
-  const name = 'Alex Chen';
+  const name = 'Khesim Reid';
   const letters = Array.from(name);
   const container = {
     hidden: {
@@ -56,18 +55,12 @@ export function HeroSection() {
             }}
             className="w-full md:w-auto flex-shrink-0 flex justify-center md:justify-start">
 
-            <div className="w-64 h-80 md:w-80 md:h-[400px] rounded-lg border-2 border-sky-100 bg-slate-50 flex flex-col items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-slate-50/50 backdrop-blur-sm z-10" />
-              <div className="relative z-20 flex flex-col items-center gap-4">
-                <div className="p-4 rounded-full bg-white shadow-sm">
-                  <User className="w-12 h-12 text-slate-300" />
-                </div>
-                <span className="text-sm font-medium text-slate-400 uppercase tracking-wider">
-                  Your Photo
-                </span>
-              </div>
-              {/* Decorative background pattern */}
-              <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#0ea5e9_1px,transparent_1px)] [background-size:16px_16px] z-0" />
+            <div className="w-64 h-80 md:w-80 md:h-[400px] rounded-lg border-2 border-sky-100 overflow-hidden">
+              <img
+                src="/KhesimReid.jpg"
+                alt="Khesim Reid"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
@@ -124,10 +117,10 @@ export function HeroSection() {
               className="max-w-xl mx-auto md:mx-0">
 
               <p className="text-lg md:text-xl text-slate-600 leading-relaxed font-light">
-                A Senior Software Engineer specializing in building exceptional
-                digital experiences. I craft scalable, performant, and
-                accessible web applications with a focus on clean code and
-                thoughtful design.
+                I am an experienced Software Engineer with a proven track record in Big Tech and Fintech.
+                My work focuses on building high-availability, full-stack systems that support millions of users globally. 
+                With an academic foundation from top-tier UK institutions and professional experience navigating the complexities and scale of multinational environments, 
+                I specialize in bridging the gap between customer needs and technical implementation.
               </p>
             </motion.div>
           </div>

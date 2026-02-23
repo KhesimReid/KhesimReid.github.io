@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { HeroSection } from './components/HeroSection';
 import { ServicesSection } from './components/ServicesSection';
 import { TechSection } from './components/TechSection';
@@ -6,7 +7,9 @@ import { ProjectsSection } from './components/ProjectsSection';
 import { BlogSection } from './components/BlogSection';
 import { ContactSection } from './components/ContactSection';
 import { TopNavigation } from './components/TopNavigation';
-export function App() {
+import { ThankYouPage } from './components/ThankYouPage';
+
+function MainPage() {
   const [activeSection, setActiveSection] = useState('about');
   const sections = [
   {
@@ -69,8 +72,19 @@ export function App() {
       </main>
 
       <footer className="py-8 text-center text-slate-400 text-sm border-t border-slate-100">
-        © {new Date().getFullYear()} Alex Chen. All rights reserved.
+        © {new Date().getFullYear()} Khesim Reid. All rights reserved.
       </footer>
     </div>);
 
+}
+
+export function App() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/thank-you" element={<ThankYouPage />} />
+      </Routes>
+    </HashRouter>
+  );
 }
