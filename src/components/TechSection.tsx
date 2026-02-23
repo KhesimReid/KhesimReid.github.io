@@ -82,31 +82,34 @@ export function TechSection() {
                 {category.name}
               </h3>
 
-              <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                {category.items.map((item, itemIndex) =>
+              <motion.div
+                className="flex flex-wrap justify-center md:justify-start gap-3"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: {},
+                  visible: { transition: { staggerChildren: 0.04 } }
+                }}>
+                {category.items.map((item) =>
               <motion.span
                 key={item}
-                initial={{
-                  opacity: 0,
-                  scale: 0.9
+                variants={{
+                  hidden: { opacity: 0, scale: 0, y: 10 },
+                  visible: { opacity: 1, scale: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 18 } }
                 }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1
-                }}
-                viewport={{
-                  once: true
-                }}
-                transition={{
-                  duration: 0.3,
-                  delay: categoryIndex * 0.2 + itemIndex * 0.05
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: '0 0 12px 2px rgba(14,165,233,0.35)',
+                  borderColor: '#38bdf8',
+                  color: '#0284c7',
                 }}
                 className="px-5 py-2 rounded-full border border-slate-200 bg-white text-slate-700 text-sm font-medium transition-colors duration-300 hover:border-sky-300 hover:text-sky-600 cursor-default">
 
                     {item}
                   </motion.span>
               )}
-              </div>
+              </motion.div>
             </motion.div>
           )}
         </div>
