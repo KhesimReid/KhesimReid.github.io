@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { Github, Linkedin, FileDown, Send } from 'lucide-react';
 import { MagneticButton } from './MagneticButton';
 import { useFormspark } from '@formspark/use-formspark';
+import Botpoison from '@botpoison/browser';
 
 const FORMSPARK_FORM_ID = 'ArdzDo2kI';
+const BOTPOISON_PUBLIC_KEY = 'pk_a56f294f-227d-45c9-850e-7554f9151132';
 
 export function ContactSection() {
   const navigate = useNavigate();
@@ -21,7 +23,9 @@ export function ContactSection() {
     e.preventDefault();
     setError(false);
     try {
-      await submit(fields);
+      const botpoison = new Botpoison({ publicKey: BOTPOISON_PUBLIC_KEY });
+      const { solution } = await botpoison.challenge();
+      await submit({ ...fields, _botpoison: solution });
       navigate('/thank-you');
     } catch {
       setError(true);
