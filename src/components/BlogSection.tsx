@@ -66,7 +66,7 @@ export function BlogSection() {
                 Coming Soon
               </h3>
               <p className="text-slate-500">
-                Thoughts on software architecture, performance, and design.
+                Thoughts on my interests, software, careers and how big tech principals can advance small island nations.
               </p>
             </div>
           </div>

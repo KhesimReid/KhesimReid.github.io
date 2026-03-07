@@ -24,7 +24,7 @@ export function ProjectsSection() {
             }}
             className="text-3xl md:text-4xl font-sans font-semibold tracking-tight text-slate-900">
 
-            Past Projects
+            Projects
           </motion.h2>
         </div>
 
