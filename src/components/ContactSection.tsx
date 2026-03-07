@@ -3,13 +3,15 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Github, Linkedin, FileDown, Send } from 'lucide-react';
 import { MagneticButton } from './MagneticButton';
+import { useFormspark } from '@formspark/use-formspark';
 
-const FORMSPARK_URL = 'https://submit-form.com/ArdzDo2kI';
+const FORMSPARK_FORM_ID = 'ArdzDo2kI';
 
 export function ContactSection() {
   const navigate = useNavigate();
   const [fields, setFields] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
+  const [error, setError] = useState(false);
+  const [submit, submitting] = useFormspark({ formId: FORMSPARK_FORM_ID });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFields(prev => ({ ...prev, [e.target.id]: e.target.value }));
@@ -17,20 +19,12 @@ export function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('loading');
+    setError(false);
     try {
-      const res = await fetch(FORMSPARK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(fields),
-      });
-      if (res.ok) {
-        navigate('/thank-you');
-      } else {
-        setStatus('error');
-      }
+      await submit(fields);
+      navigate('/thank-you');
     } catch {
-      setStatus('error');
+      setError(true);
     }
   };
 
@@ -134,16 +128,16 @@ export function ContactSection() {
                     placeholder="Tell me about your project..." />
                 </div>
 
-                {status === 'error' && (
+                {error && (
                   <p className="text-red-500 text-sm">Something went wrong. Please try again.</p>
                 )}
 
                 <MagneticButton
                   type="submit"
-                  disabled={status === 'loading'}
+                  disabled={submitting}
                   className="w-full bg-sky-500 hover:bg-sky-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium py-4 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300">
                   <Send className="w-4 h-4" />
-                  {status === 'loading' ? 'Sending…' : 'Send Message'}
+                  {submitting ? 'Sending…' : 'Send Message'}
                 </MagneticButton>
               </form>
 
