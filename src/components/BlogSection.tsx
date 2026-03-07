@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { PenLine } from 'lucide-react';
 export function BlogSection() {
   return (
-    <section id="blog" className="w-full bg-white py-24">
+    <section id="blog" className="w-full bg-white py-12 md:py-20">
       <div className="container mx-auto px-6 md:px-8">
         {/* Section Header */}
-        <div className="border-t border-slate-200 pt-16 mb-20 text-center">
+        <div className="border-t border-slate-100 pt-8 mb-8 text-center">
           <motion.h2
             initial={{
               opacity: 0,
@@ -22,7 +22,7 @@ export function BlogSection() {
             transition={{
               duration: 0.6
             }}
-            className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
+            className="text-3xl md:text-4xl font-sans font-semibold tracking-tight text-slate-900">
 
             Blog
           </motion.h2>
@@ -62,7 +62,7 @@ export function BlogSection() {
 
             <div className="relative z-10 text-center bg-white/80 backdrop-blur-[2px] p-6 rounded-xl border border-slate-100/50">
               <PenLine className="w-10 h-10 text-slate-300 mx-auto mb-4" />
-              <h3 className="text-3xl font-serif italic text-slate-400 mb-2">
+              <h3 className="text-2xl font-semibold text-slate-400 mb-2">
                 Coming Soon
               </h3>
               <p className="text-slate-500">

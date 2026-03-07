@@ -35,10 +35,10 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="w-full bg-white py-24 mb-12">
+    <section id="contact" className="w-full bg-white py-12 md:py-20 mb-12">
       <div className="container mx-auto px-6 md:px-8">
         {/* Section Header */}
-        <div className="border-t border-slate-200 pt-16 mb-20 text-center">
+        <div className="border-t border-slate-100 pt-8 mb-8 text-center">
           <motion.h2
             initial={{
               opacity: 0,
@@ -54,7 +54,7 @@ export function ContactSection() {
             transition={{
               duration: 0.6
             }}
-            className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
+            className="text-3xl md:text-4xl font-sans font-semibold tracking-tight text-slate-900">
 
             Get In Touch
           </motion.h2>
@@ -77,9 +77,9 @@ export function ContactSection() {
               duration: 0.6,
               delay: 0.2
             }}
-            className="bg-white p-8 md:p-10 border border-slate-200 rounded-lg">
+            className="">
 
-            <p className="text-center text-slate-600 mb-10 font-light text-lg">
+            <p className="text-center text-slate-600 mb-10 font-normal text-lg">
               Have a project in mind or just want to say hi? I'd love to hear
               from you.
             </p>
@@ -89,7 +89,7 @@ export function ContactSection() {
                   <div className="space-y-2">
                     <label
                       htmlFor="name"
-                      className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                      className="text-sm font-medium text-slate-500">
                       Name
                     </label>
                     <input
@@ -104,7 +104,7 @@ export function ContactSection() {
                   <div className="space-y-2">
                     <label
                       htmlFor="email"
-                      className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                      className="text-sm font-medium text-slate-500">
                       Email
                     </label>
                     <input
@@ -121,7 +121,7 @@ export function ContactSection() {
                 <div className="space-y-2">
                   <label
                     htmlFor="message"
-                    className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                    className="text-sm font-medium text-slate-500">
                     Message
                   </label>
                   <textarea

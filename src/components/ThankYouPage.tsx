@@ -16,14 +16,14 @@ export function ThankYouPage() {
         className="max-w-md w-full text-center">
 
         <div className="flex justify-center mb-6">
-          <CheckCircle className="w-16 h-16 text-sky-500" />
+          <CheckCircle className="w-16 h-16 text-slate-400" />
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">
+        <h1 className="text-3xl md:text-4xl font-sans font-bold tracking-tight text-slate-900 mb-4">
           Message received.
         </h1>
 
-        <p className="text-lg text-slate-500 font-light leading-relaxed mb-10">
+        <p className="text-lg text-slate-500 font-normal leading-relaxed mb-10">
           Thanks for reaching out — I'll get back to you as soon as possible.
         </p>
 

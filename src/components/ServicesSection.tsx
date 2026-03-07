@@ -5,13 +5,13 @@ const services = [
 {
   title: 'Full-Stack Development',
   description:
-  'Building end-to-end web applications with modern frameworks like React, Next.js, and Node.js. Seamless integration from database to frontend.',
+  'I build end-to-end web applications with modern frameworks like React, Next.js, and Node.js. Seamless integration from database to frontend.',
   icon: Code2
 },
 {
   title: 'System Design',
   description:
-  'Designing distributed systems that are resilient, performant, and built for scale. I am experienced in architecting platforms for global traffic, managing complex API migrations, and microservices orchestration.',
+  'I design distributed systems that are resilient, performant, and built for scale. I am experienced in architecting platforms for global traffic, managing complex API migrations, and microservices orchestration.',
   icon: Server
 },
 // {
@@ -29,7 +29,7 @@ const services = [
 {
   title: 'Technical Consulting',
   description:
-  'I provide technical audits and modernization strategies for startups and established firms. Whether it\'s optimizing frontend performance or hardening backend services, I focus on scalability, efficiency and reliability.',
+  'I provide technical audits and modernization strategies for small projects, startups and established firms. Whether it\'s optimizing frontend performance or hardening backend services, I focus on scalability, efficiency and reliability.',
   icon: Lightbulb
 },
 {
@@ -42,10 +42,10 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="w-full bg-white py-24">
+    <section id="services" className="w-full bg-white py-12 md:py-20">
       <div className="container mx-auto px-6 md:px-8">
         {/* Section Header */}
-        <div className="border-t border-slate-200 pt-16 mb-20 text-center">
+        <div className="border-t border-slate-100 mb-8 text-center pt-8">
           <motion.h2
             initial={{
               opacity: 0,
@@ -61,50 +61,32 @@ export function ServicesSection() {
             transition={{
               duration: 0.6
             }}
-            className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
+            className="text-3xl md:text-4xl font-sans font-semibold tracking-tight text-slate-900">
 
             What I Can Help You With
           </motion.h2>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* Services List */}
+        <div className="max-w-3xl mx-auto">
           {services.map((service, index) =>
           <motion.div
             key={index}
-            initial={{
-              opacity: 0,
-              y: 30
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.1
-            }}
-            className={`${index === 4 ? 'md:col-span-2 md:max-w-2xl md:mx-auto w-full' : ''}`}>
-
-            <div className="p-8 rounded-lg border border-slate-200 bg-white h-full">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
-                <div className="flex-shrink-0 p-3 rounded-full bg-sky-50 text-sky-600">
-                  <service.icon className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-serif font-semibold text-slate-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
+            className="flex items-start gap-6 py-8 border-b border-slate-100 last:border-0">
+            <service.icon className="w-5 h-5 text-slate-400 flex-shrink-0 mt-1" />
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                {service.title}
+              </h3>
+              <p className="text-slate-500 leading-relaxed">
+                {service.description}
+              </p>
             </div>
-            </motion.div>
+          </motion.div>
           )}
         </div>
       </div>

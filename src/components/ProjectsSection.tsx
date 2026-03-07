@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Layout } from 'lucide-react';
 export function ProjectsSection() {
   return (
-    <section id="projects" className="w-full bg-white py-24">
+    <section id="projects" className="w-full bg-white py-12 md:py-20">
       <div className="container mx-auto px-6 md:px-8">
         {/* Section Header */}
-        <div className="border-t border-slate-200 pt-16 mb-20 text-center">
+        <div className="border-t border-slate-100 pt-8 mb-8 text-center">
           <motion.h2
             initial={{
               opacity: 0,
@@ -22,7 +22,7 @@ export function ProjectsSection() {
             transition={{
               duration: 0.6
             }}
-            className="text-3xl md:text-4xl font-serif font-bold text-slate-900">
+            className="text-3xl md:text-4xl font-sans font-semibold tracking-tight text-slate-900">
 
             Past Projects
           </motion.h2>
@@ -62,7 +62,7 @@ export function ProjectsSection() {
                 <Layout className="w-10 h-10 text-slate-300" />
               </div>
 
-              <h3 className="text-2xl font-serif font-medium text-slate-400 mb-3">
+              <h3 className="text-2xl font-semibold text-slate-400 mb-3">
                 Coming Soon
               </h3>
 
