@@ -147,7 +147,7 @@ export function ContactSection() {
 
             <div className="mt-12 pt-8 border-t border-slate-100 flex justify-center gap-8">
               {[
-                { Icon: Github, href: 'https://github.com/khesimreid', label: 'GitHub' },
+                // { Icon: Github, href: 'https://github.com/khesimreid', label: 'GitHub' },
                 { Icon: Linkedin, href: 'https://www.linkedin.com/in/khesim-reid/', label: 'LinkedIn' },
                 { Icon: FileDown, href: '/Khesim_Reid_CV.pdf', label: 'Download CV' },
               ].map(({ Icon, href, label }) =>
