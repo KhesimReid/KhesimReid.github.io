@@ -67,7 +67,7 @@ export function ProjectsSection() {
               </h3>
 
               <p className="text-slate-500 max-w-md mx-auto">
-                A curated showcase of my best work is currently being updated.
+                A curated showcase of my work is currently being updated.
                 Check back soon for case studies and live demos.
               </p>
             </div>

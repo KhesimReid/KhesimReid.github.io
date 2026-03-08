@@ -5,7 +5,7 @@ const services = [
 {
   title: 'Full-Stack Development',
   description:
-  'I build end-to-end web applications with modern frameworks like React, Next.js, and Node.js. Seamless integration from database to frontend.',
+  'I build end-to-end web applications with modern frameworks like React, Next.js, and Node.js. I ensure seamless integration from database to frontend.',
   icon: Code2
 },
 {
