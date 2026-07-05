@@ -5,7 +5,7 @@ import { HeroSection } from './components/HeroSection';
 import { ServicesSection } from './components/ServicesSection';
 import { TechSection } from './components/TechSection';
 import { ProjectsSection } from './components/ProjectsSection';
-import { BlogSection } from './components/BlogSection';
+// import { BlogSection } from './components/BlogSection';
 import { ContactSection } from './components/ContactSection';
 import { TopNavigation } from './components/TopNavigation';
 import { ThankYouPage } from './components/ThankYouPage';
@@ -29,10 +29,10 @@ function MainPage() {
     id: 'projects',
     label: 'Projects'
   },
-  {
-    id: 'blog',
-    label: 'Blog'
-  },
+  // {
+  //   id: 'blog',
+  //   label: 'Blog'
+  // },
   {
     id: 'contact',
     label: 'Contact'
@@ -81,7 +81,7 @@ function MainPage() {
         <ServicesSection />
         <TechSection />
         <ProjectsSection />
-        <BlogSection />
+        {/* <BlogSection /> */}
         <ContactSection />
       </main>
 
